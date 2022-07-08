@@ -1,0 +1,53 @@
+@use "./scss/" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  @include tablet {
+    font-size: 80%;
+  }
+  @include moblie {
+    font-size: 60%;
+  }
+}
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: $body-bg;
+  color: $txt-color;
+  @include moblie {
+    margin-bottom: 3rem;
+  }
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+@media (hover: hover) {
+  a {
+    color: $main-color;
+  }
+}
+img {
+  max-width: 100%;
+}
+mb-3 {
+  margin-bottom: 3rem;
+}
+mb-2 {
+  margin-bottom: 2rem;
+}
+section {
+  padding: 0 2rem;
+}
+.section__header {
+  @include flex(center, space-between);
+}
