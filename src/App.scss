@@ -1,5 +1,8 @@
 @use "./scss/" as *;
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;900&display=swap");
+@font-face {
+  font-family: "ArgonPERSONAL";
+  src: url(../Font/ArgonPERSONAL-Regular.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +18,7 @@ html {
   }
 }
 body {
-  font-family: $font-family;
+  font-family: sans-serif;
   font-weight: 400;
   line-height: 1.5;
   background-color: $body-bg;
@@ -32,7 +35,7 @@ ul {
   list-style: none;
 }
 @media (hover: hover) {
-  a {
+  a:hover {
     color: $main-color;
   }
 }
@@ -50,4 +53,8 @@ section {
 }
 .section__header {
   @include flex(center, space-between);
+}
+.container {
+  max-width: 1660px;
+  margin: auto;
 }

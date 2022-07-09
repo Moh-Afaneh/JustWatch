@@ -1,14 +1,11 @@
 import axios from "axios";
 import queryString from "query-string";
 import APICofig from "./APICofig";
-console.log(123);
+
 const AxiosClient = axios.create({
   baseURL: APICofig.Base_Url,
   headers: {
     "Content-type": "application/json",
-  },
-  params: {
-    api_key: APICofig.apikey,
   },
   paramsSerializer: (params) =>
     queryString.stringify({

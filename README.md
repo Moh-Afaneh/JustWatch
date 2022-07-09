@@ -1,1 +1,1 @@
-# Responsive Movie application using Sass , React Js , TMBD API
+# Responsive Movie application using Sass , React Js , TMDB API
