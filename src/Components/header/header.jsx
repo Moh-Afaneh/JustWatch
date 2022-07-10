@@ -1,6 +1,6 @@
 import "./header.scss";
 import logo from "../../assets/LogoMovies.png";
-import { useLocation, Link, useHistory } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import React, { useEffect, useRef } from "react";
 const HeaderNav = [
   {
@@ -9,14 +9,14 @@ const HeaderNav = [
   },
   {
     display: "Movies",
-    Path: "/movies",
+    Path: "/movie",
   },
   {
     display: "TV Series",
     Path: "/tv",
   },
 ];
-function Header() {
+function Header(props) {
   useEffect(() => {
     const ShrinkHeader = () => {
       if (
@@ -44,7 +44,9 @@ function Header() {
       <div className="header__wrap container">
         <div className="logo">
           <img src={logo} alt="t-movies-logo" />
-          <Link to="/">JordanBest</Link>
+          <Link to="/">
+            <p>HeMovie</p>
+          </Link>
         </div>
         <ul className="header__nav">
           {HeaderNav.map((e, i) => (

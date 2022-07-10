@@ -15,13 +15,11 @@ const AxiosClient = axios.create({
 });
 
 AxiosClient.interceptors.request.use(async (config) => {
-  console.log(config);
   return config;
 });
 AxiosClient.interceptors.response.use(
   async (response) => {
     if (response && response.data) {
-      console.log(response);
       return response.data;
     }
     return response;

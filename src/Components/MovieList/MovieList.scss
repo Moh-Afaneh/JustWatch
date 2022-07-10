@@ -1,0 +1,12 @@
+@use "../../scss/" as *;
+.MovieListSlider {
+  .swiper-slide {
+    width: 15%;
+    @include tablet {
+      width: 30%;
+    }
+    @include moblie {
+      width: 40%;
+    }
+  }
+}

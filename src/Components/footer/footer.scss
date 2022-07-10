@@ -1,0 +1,46 @@
+@use "../../scss/" as *;
+.footer {
+  position: relative;
+  padding: 2rem 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include moblie {
+    display: none;
+  }
+
+  &__content {
+    &__menus {
+      max-width: 50rem;
+      align-content: center;
+      justify-content: center;
+      display: grid;
+      padding-left: 10vw;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__logo {
+      @include flex(center, center);
+      margin-bottom: 3rem;
+      img {
+        width: 350px;
+      }
+    }
+    &__menu {
+      @include flex(flex-start, center);
+      opacity: 0.6;
+      font-weight: 100;
+      text-align: center;
+      flex-direction: column;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      Link {
+        text-align: left;
+      }
+      & > * ~ * {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
