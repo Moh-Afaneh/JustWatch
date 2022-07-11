@@ -23,7 +23,7 @@ function MovieList(props) {
             res = await tmbdApi.getTvSeries(props.type, { params });
         }
       } else {
-        res = await tmbdApi.similar(props.type, props.id);
+        res = await tmbdApi.similar(props.category, props.id);
       }
       setMoviesList(res.results);
     };

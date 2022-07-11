@@ -41,19 +41,32 @@
     &__info {
       position: relative;
       width: 50%;
+
       padding: 0 3rem;
       & > * ~ * {
         margin-top: 3rem;
       }
+      @include moblie {
+        width: 150%;
+      }
       @include tablet {
         width: 100%;
       }
+
       .title {
         font-size: 3rem;
         font-weight: 700;
         line-height: 1;
         @include tablet {
           font-size: 4rem;
+        }
+        @include moblie {
+          font-size: 3rem;
+        }
+      }
+      .overview {
+        @include tablet {
+          font-size: 1.3rem;
         }
       }
       .btns,

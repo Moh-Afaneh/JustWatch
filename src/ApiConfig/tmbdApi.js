@@ -31,7 +31,7 @@ const tmbdApi = {
     return AxiosClient.get(url, params);
   },
   similar: (cate, id) => {
-    const url = category[cate] + id + "/" + "similar";
+    const url = category[cate] + "/" + id + "/" + "similar";
     return AxiosClient.get(url, { params: {} });
   },
   Detail: (cate, id, params) => {

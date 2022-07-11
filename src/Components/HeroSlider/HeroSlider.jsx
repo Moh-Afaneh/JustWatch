@@ -19,9 +19,7 @@ function HeroSlider() {
           params,
         });
         SetMovies(Res.results.slice(0, 20));
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
     FetchMovies();
   }, []);
@@ -62,12 +60,11 @@ const HeroSliderItem = (props) => {
 
   const ModalActive = async () => {
     const Modal = document.getElementById(`Modal_${item.id}}`);
-    console.log(Modal);
+
     const videos = await tmbdApi.getVideos(category.movie, item.id);
     if (videos.results.length > 0) {
-      console.log(videos.results[0]);
       const VideoSrc = `https://www.youtube.com/embed/` + videos.results[0].key;
-      console.log(VideoSrc);
+
       Modal.querySelector(".modal__Content > iframe").setAttribute(
         "src",
         VideoSrc

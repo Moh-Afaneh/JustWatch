@@ -2,6 +2,7 @@
 .footer {
   position: relative;
   padding: 2rem 2rem;
+  margin-top: 10vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,7 +13,7 @@
 
   &__content {
     &__menus {
-      max-width: 50rem;
+      max-width: 100rem;
       align-content: center;
       justify-content: center;
       display: grid;
@@ -23,7 +24,7 @@
       @include flex(center, center);
       margin-bottom: 3rem;
       img {
-        width: 350px;
+        width: 50px;
       }
     }
     &__menu {

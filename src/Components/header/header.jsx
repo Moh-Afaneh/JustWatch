@@ -23,7 +23,6 @@ function Header(props) {
         document.body.scrollTop > 100 ||
         document.documentElement.scrollTop > 100
       ) {
-        console.log(document.body.scrollTop);
         headerRef.current.classlist.add("shrink");
       } else {
         headerRef.current.classlist.remove("shrink");
@@ -35,9 +34,9 @@ function Header(props) {
     };
   }, []);
   const { pathname } = useLocation();
-  console.log(useLocation().pathname);
+
   const active = HeaderNav.findIndex((e) => e.Path === pathname);
-  console.log(active);
+
   const headerRef = useRef(null);
   return (
     <div ref={headerRef} className="header">
@@ -45,7 +44,7 @@ function Header(props) {
         <div className="logo">
           <img src={logo} alt="t-movies-logo" />
           <Link to="/">
-            <p>HeMovie</p>
+            <p>Stremio</p>
           </Link>
         </div>
         <ul className="header__nav">

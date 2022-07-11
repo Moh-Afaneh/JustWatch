@@ -4,7 +4,7 @@ import { category as cate } from "../ApiConfig/tmbdApi";
 import MovieGrid from "../Components/MovieGrid/MovieGrid";
 function Catalog() {
   const { category } = useParams();
-  console.log(category);
+
   return (
     <>
       <PageHeader>
